@@ -1,0 +1,460 @@
+---
+titlefull: Design System Metrics & ROI
+titlestart: Design System
+titleend: Metrics & ROI
+year: 2025
+company: PrizePicks
+description: "Turning design system usage into an operational feedback loop — adoption, health, engineering parity, and ROI."
+excerpt: "Turning design system usage into an operational feedback loop — adoption, health, engineering parity, and ROI."
+image: /assets/work/ds-metrics-roi/dash-intro.png
+role: Design System Manager
+team: "Me, Myself and I"
+timeline: "Q1 2026 (Currently in progress)"
+metrics:
+  - value: "55%"
+    label: "Figma Component Coverage"
+  - value: "$3.2M"
+    label: "Cost Saved"
+  - value: "29%"
+    label: "Engineering Coverage"
+sort_order: 5
+card_note: "This is a current initiative for me and is therefore unfinished, but I felt it was worth showing."
+---
+
+<section class="w-full border-b border-border-light dark:border-border-dark overflow-hidden pb-24">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col items-center text-center">
+        <div class="max-w-3xl text-left space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">The Challenge</span>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                We are a small team working on a product scaling faster than anyone ever could have imagined. It's a highly competitive market and speed if of the essence. 
+            </p>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                There was hardly a moment to take a step back and assess the work. We knew were making an impact. We knew we were having success, but that's not enough.
+            </p>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                It is imperative we demonstrate the value and impact of the work we do to our partners and stakeholders. At the time, it was not. That was a problem.
+            </p>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                We need to make our impact as visible and accessible to them as possible. That was my mission.
+            </p>
+            {% include insight-callout.html
+                label="A Few Core Questions"
+                icon="help"
+                text="Are teams actually using Flex? What's breaking or causing teams to diverge? How does design usage translate to engineering usage? What's the business value of system reuse?"
+            %}
+        </div>
+    </div>
+</section>
+{% include case-study-hero.html image="/assets/work/ds-metrics-roi/dash-masthead.png" alt="Team workspace with computer monitors" %}
+<section class="w-full bg-slate-50 dark:bg-surface-dark py-24 border-b border-border-light dark:border-border-dark">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div class="flex flex-col items-center text-center mb-16">
+            <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">90-Day Impact Snapshot</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 w-full md:divide-x-2 divide-slate-300 dark:divide-slate-700">
+            <div class="relative px-6 md:px-8 py-4">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">132K</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Component Insertions</p>
+                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Total insertions across all teams</p>
+            </div>
+            <div class="relative px-6 md:px-8 py-4">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">55%</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Component Coverage</p>
+                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Library components actively in use across product files.</p>
+            </div>
+            <div class="relative px-6 md:px-8 py-4">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">$3.2M</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Estimated Cost Saved</p>
+                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Based on 42.4K hours saved at blended engineering rates.</p>
+            </div>
+            <div class="relative px-6 md:px-8 py-4">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">29.5%</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Engineering Coverage</p>
+                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">DS usage baseline in the codebase (Flex vs native/third-party).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w-full max-w-[1200px] px-4 md:px-8 py-32 mx-auto">
+    <div class="flex flex-col gap-32">
+
+        <!-- #1 What I Built -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">What I Built</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">A lightweight analytics pipeline + dashboard</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I built a React dashboard (running locally + deployable via Vercel), powered by Figma API ingestion for Library Analytics, Supabase for storing/normalizing data, and a codebase analyzer to measure engineering parity.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">dashboard</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">React Dashboard</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Local-first with Vercel deploy. Views for adoption, health, ROI, parity, and tokens.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">api</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Figma API Ingestion</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Pulls usage + metadata from Figma Library Analytics automatically.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">database</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Supabase</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Stores and normalizes data for querying and historical tracking.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">terminal</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Codebase Analyzer</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Measures engineering parity: Flex DS vs Native RN vs Third-party vs Local components.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- #2 How It Works -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Architecture</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Data flow</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    The pipeline is simple by design. Pull, normalize, render, act, re-measure.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-5 border-t-4 border-primary text-center">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-2 block">cloud_download</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white text-sm">Pull from Figma API</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-5 border-t-4 border-primary text-center">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-2 block">transform</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white text-sm">Normalize + store</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-5 border-t-4 border-primary text-center">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-2 block">monitoring</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white text-sm">Render dashboards</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-5 border-t-4 border-primary text-center">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-2 block">data_exploration</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white text-sm">Analyze codebase</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-5 border-t-4 border-primary text-center">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-2 block">loop</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white text-sm">Baseline → Insight → Action</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- #3 Adoption Dashboard -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Usage</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Adoption</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    "Are teams using Flex — and what's driving adoption?"
+                </p>
+                <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Live pulse:</strong> coverage %, total insertions, active teams</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Trend line:</strong> insertions vs detachments over time</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Usage by team:</strong> who's adopting fastest</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Top components:</strong> what to harden + document first</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Unused components:</strong> Should we deprecate? Investigate usage</span>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/ds-metrics-roi/dash-flex-adoption.png" alt="Adoption dashboard view" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Adoption dashboard — live pulse, trend lines, team usage, top components.</p>
+            </div>
+        </div>
+
+        <!-- #4 Engineering Parity Dashboard -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Code Usage</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Engineering Parity</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I vibe coded a local tool that analyzes our codebase locally scans the correct packages to assess component usage. 
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I can simply pull our react native repository and run the scan locally as necessary to update the dashboard.
+                </p>
+                <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Coverage baseline:</strong> % of components in code that come from Flex</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Breakdown:</strong> Flex vs Native RN vs Third-party vs Local</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">File-level view:</strong> find low-coverage hotspots</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Component list by source:</strong> identify migration candidates</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/ds-metrics-roi/dash-engineering.png" alt="Engineering parity dashboard" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Engineering parity — coverage baseline, breakdown bars, file-level analysis.</p>
+            </div>
+        </div>
+
+        <!-- #5 Component Health Dashboard -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Detachments</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Component Health</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    This gives us a singal where we need to focus our component work. 
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    We can instantly start to investigate those components we see with higher detachments and get to the bottom of the why.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Healthy</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Components with strong adoption and low detachments.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-amber-500 text-2xl shrink-0">warning</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Warning</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Rising detachments or declining usage trends.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">error</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Critical</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">High detachments — missing variants, confusing APIs, doc gaps.</p>
+                    </div>
+                </div>
+            </div>
+            {% include insight-callout.html
+                label="Why Detachments Matter"
+                icon="error_outline"
+                text="Detachments are a signal, not a metric to optimize blindly. Each one represents a moment where the system didn't meet a team's need — and that's the most valuable feedback loop we have."
+            %}
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/ds-metrics-roi/dash-health.png" alt="Component health dashboard" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Component health — healthy/warning/critical rollup and detachment ranking.</p>
+            </div>
+        </div>
+
+        <!-- #6 ROI Dashboard -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Impact</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">ROI</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I wanted what I'd conssider more of an "executive-level" dashboard to help us justify the work we're doing.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I wanted to be able to say "we've saved you X hours of design and engineering time" and "we've saved you Y dollars in costs".
+                </p>
+
+            </div>
+            <div class="max-w-3xl">
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Conservative model</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-2xl shrink-0">start</span>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">First use per team</p>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Saves full build effort</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-2xl shrink-0">replay</span>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Repeat uses</p>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Save smaller (but real) incremental time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">ROI rollup:</strong> hours saved, cost saved, ROI multiple</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">ROI by component:</strong> identify highest-leverage work</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">ROI by team:</strong> where the system creates the most value</span>
+                </li>
+            </ul>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/ds-metrics-roi/dash-flex-roi.png" alt="ROI dashboard view" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">ROI dashboard — hours saved, cost saved, ROI multiple, breakdowns by component and team.</p>
+            </div>
+        </div>
+
+        <!-- #7 Tokens & Variables Dashboard -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">BRAND</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Tokens & Variables</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    The real value-add is to be able to see Primitive usage and where we need to support the team with better Semantic tokens to reduce the amount of Primitive usage.
+                </p>
+                <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Total variables + usage:</strong> system-wide token footprint</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Semantic vs primitive:</strong> visibility into intent-driven usage</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Governance focus:</strong> naming gaps, missing semantics, education opportunities</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/ds-metrics-roi/dash-tokens.png" alt="Tokens and variables dashboard" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Tokens & variables — total count, semantic vs primitive breakdown, category analysis.</p>
+            </div>
+        </div>
+
+        <!-- #8 B2C Adoption -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Shared Product Libraries</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">B2C Adoption</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    Our team put a lot of effort into educating the teams on the value of shared product libraries. It was important that I also surface that data related to these libraries.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    With this data being more accessible, the hope was we'd see an increase in adoption, contributions and usage of these libraries.
+                </p>
+                <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Live pulse:</strong> coverage %, total insertions, active teams</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Trend line:</strong> insertions vs detachments over time</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Usage by team:</strong> who's adopting fastest</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Top components:</strong> what to harden + document first</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Unused components:</strong> Should we deprecate? Investigate usage</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/ds-metrics-roi/dash-b2c-adoption.png" alt="Adoption analytics related to our Shared Consumer Product Libraries" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">B2C adoption — library usage, component usage, team usage, usage by library.</p>
+            </div>
+        </div>
+
+
+        <!-- #9 Outcomes -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Outcomes</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">What this unlocked</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Created a <strong class="text-slate-900 dark:text-white">shared language</strong> for DS value across design + engineering.</p>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Turned <strong class="text-slate-900 dark:text-white">"we think this is working"</strong> into measurable signals.</p>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed"><strong class="text-slate-900 dark:text-white">Improved roadmap prioritization</strong> with real usage + friction data.</p>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Established <strong class="text-slate-900 dark:text-white">baselines for adoption, parity, and health</strong> trackable quarter-over-quarter.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- #10 What's Next -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Reflection</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">What's next</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">sentiment_satisfied</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Satisfaction survey</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Quarterly trend baseline for team satisfaction with the system.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">record_voice_over</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Targeted interviews</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Low-coverage teams + high-detachment component users.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">event_repeat</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Monthly triage</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Convert health/parity signals into a recurring triage workflow.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">smart_toy</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">AI impact tracking</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Tie AI initiatives to metrics — before/after on adoption + detachments + parity.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

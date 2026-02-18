@@ -1,0 +1,25 @@
+{% comment %}
+  Insight Callout Component
+  Parameters:
+  - label: The callout label (e.g. "The Cultural Shift")
+  - icon: Material Symbols icon name (default: "lightbulb")
+  - text: The callout body text
+  - link_url: Optional URL for a link (e.g. "https://github.com/...")
+  - link_text: Optional link text (e.g. "Figma Console MCP")
+  - full_width: Optional. When true, callout spans full width (no max-w-3xl)
+{% endcomment %}
+<div class="relative bg-slate-50 dark:bg-surface-dark border-l-4 border-primary rounded-r-lg px-8 py-8 {% if include.full_width %}w-full{% else %}max-w-3xl{% endif %}">
+    <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-primary text-2xl">{{ include.icon | default: "lightbulb" }}</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary">{{ include.label | default: "Insight" }}</span>
+    </div>
+    <p class="font-body text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+        {{ include.text }}
+    </p>
+    {% if include.link_url and include.link_url != '' %}
+    <a href="{{ include.link_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 font-heading font-medium text-primary hover:underline">
+        {{ include.link_text | default: "Learn more" }}
+        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+    </a>
+    {% endif %}
+</div>

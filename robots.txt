@@ -1,0 +1,9 @@
+---
+layout: null
+sitemap: false
+---
+{% if site.url != '' %}Sitemap: {{ site.url }}/sitemap.xml
+{% endif %}
+User-agent: *
+Disallow: /casestudies/
+Disallow: /casestudy/

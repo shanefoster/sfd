@@ -1,0 +1,536 @@
+---
+titlefull: Bridging the Gap with Semantic Tokens
+titlestart: Bridging the Gap with 
+titleend: Semantic Tokens
+year: 2025
+company: PrizePicks
+description: Bridging the gap between design and engineering with a shared styling language across multiple products.
+excerpt: Bridging the gap between design and engineering with a shared styling language across multiple products.
+image: /assets/work/semantic-tokens/semantic-tokens-intro.png
+role: Design System Manager
+team: Myself, React Native Team
+timeline: Q1 2024 — Q2 2024
+metrics:
+  - value: "60%"
+    label: "Faster Handoff"
+  - value: "100%"
+    label: "Core Coverage"
+  - value: "65%"
+    label: "Reduction in Primitives"
+sort_order: 3
+---
+<section class="w-full border-b border-border-light dark:border-border-dark overflow-hidden pb-24">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col items-center text-center">
+        <div class="max-w-3xl text-left space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">The Problem</span>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                PrizePicks is in hyper-growth mode, but our operational maturity hadn't kept pace. We lacked a defined design-to-engineering workflow, which created unintentional silos and friction between teams. 
+            </p>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                Engineers were losing velocity trying to interpret visual intent. To sustain our business growth, I needed to bridge this gap: not just by building a technical solution, but by evangelizing a shared language that united Design and Engineering under a single source of truth.
+            </p>
+            {% include insight-callout.html
+                label="The Cultural Shift"
+                text="The challenge went deeper than syntax. It was a total mental model shift. Neither discipline had worked in a tokenized environment, requiring us to rewire our collective muscle memory. My role shifted from architect to educator—guiding the team to unlearn static values and fundamentally change how we build."
+            %}
+        </div>
+    </div>
+</section>
+{% include case-study-hero.html image="/assets/work/semantic-tokens/semantic-masthead.png" alt="Semantic Tokens masthead" %}
+<section class="w-full bg-slate-50 dark:bg-surface-dark py-24 border-b border-border-light dark:border-border-dark">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div class="flex flex-col items-center text-center mb-16">
+            <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Measurable Impact</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 md:divide-x-2 divide-slate-300 dark:divide-slate-700">
+            {% for metric in page.metrics %}
+            <div class="relative px-8 md:px-10">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">{{ metric.value }}</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">{{ metric.label }}</p>
+                {% if forloop.index == 1 %}
+                <p class="font-body text-slate-600 dark:text-slate-400">Reduction in time spent on design-to-engineering specifications.</p>
+                {% elsif forloop.index == 2 %}
+                <p class="font-body text-slate-600 dark:text-slate-400">Core design system components using semantic tokens.</p>
+                {% else %}
+                <p class="font-body text-slate-600 dark:text-slate-400">Reduction in primitive color tokens through semantic grouping.</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="w-full max-w-[1200px] px-4 md:px-8 py-32 mx-auto">
+    <div class="flex flex-col gap-32">
+        <div class="flex flex-col gap-8 mb-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Identifying the Problem</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Interviews</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    I interviewed product designers and engineers to understand their pain points in working with the system. I wanted to identify themes and patterns that would help me prioritize the work.                
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    One consistent theme emerged. Visual styling was more often than not lost in translation.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col h-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-8 shadow-sm">
+                        <div class="mb-6 text-primary">
+                            <span class="material-icons text-primary text-4xl md:text-5xl select-none" aria-hidden="true">format_quote</span>
+                        </div>
+                        <p class="font-body italic text-slate-600 dark:text-slate-300 mb-8 flex-grow leading-relaxed">
+                            "We get a Figma file and then spend 30 minutes guessing what the right color value is. There's no shared language between what design calls something and what we use in code."
+                        </p>
+                        <div class="mt-auto border-t border-slate-100 dark:border-slate-800 pt-6">
+                            <p class="font-display font-bold text-slate-900 dark:text-white text-lg">Front-End Engineer</p>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1">React Native Team</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col h-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-8 shadow-sm">
+                        <div class="mb-6 text-primary">
+                            <span class="material-icons text-primary text-4xl md:text-5xl select-none" aria-hidden="true">format_quote</span>
+                        </div>
+                        <p class="font-body italic text-slate-600 dark:text-slate-300 mb-8 flex-grow leading-relaxed">
+                            "Mine biggest pain point is divergence and kind of like you mentioned before it would be really important for engineering and designed to be tied really closely. So, things are gonna change over time and making sure that when they do change it, that is also reflected in what engineering has.
+                        </p>
+                        <div class="mt-auto border-t border-slate-100 dark:border-slate-800 pt-6">
+                            <p class="font-display font-bold text-slate-900 dark:text-white text-lg">Frontend Engineer</p>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1">PAM Team</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col h-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-8 shadow-sm">
+                        <div class="mb-6 text-primary">
+                            <span class="material-icons text-primary text-4xl md:text-5xl select-none" aria-hidden="true">format_quote</span>
+                        </div>
+                        <p class="font-body italic text-slate-600 dark:text-slate-300 mb-8 flex-grow leading-relaxed">
+                            "Our process is not very fulfilling from a engineering perspective because we have stop to make a lot of design decisions on things we fee like weshouldn't have to."
+                        </p>
+                        <div class="mt-auto border-t border-slate-100 dark:border-slate-800 pt-6">
+                            <p class="font-display font-bold text-slate-900 dark:text-white text-lg">Staff Front-End Engineer</p>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1">Platform Team</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8 pt-16">
+                    I needed to better understand:
+                </p>
+                <ul class="space-y-4 max-w-3xl mb-8 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">Where translation broke down most often (color intent, spacing rules, typography scale, states)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">What “good” would look like for implementation (consistent names, predictable usage rules)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">What tokens needed to support across products and platforms</span>
+                    </li>
+                </ul>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    This did two things:
+                </p>
+                <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">Gave me a prioritized roadmap (not a theoretical token wish-list)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">Created buy-in early—teams felt heard and invested in the outcome</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Education</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Getting Buy-In</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    I had identified a major problem. It was foundational. A solution at this level will set us up for success as we build on top of it.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl">
+                    It was now time for me to present to stakeholders and help them understand why this is a necessary solution to this problem and the impact it will have on the business.
+                </p>
+            </div>
+            <div>
+                <div class="relative w-full aspect-[16/9] bg-slate-50 dark:bg-slate-800 rounded-3xl flex items-center justify-center dark:border-slate-700">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="563" src="https://embed.figma.com/slides/344q2Qh7jqOe8YdNKmsKOu/Tokens-Introduction?node-id=1-108&embed-host=share" allowfullscreen></iframe>
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Design Tokens presentation presented to Product, Design and Engineering orgs.</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Infrastructure Refactor</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Modual Library Approach</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    Before diving into the actual tokens, we had to reveiw and assess our setup and infrastructure on both the code and design sides. We were moving at hyper speed. We were constantly experimenting, building new products and features with different needs.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    It instantly became clear we had to take a modular approach our library setup to allow flexibility, proper permissions and fewer conflicts. 
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    If teams wanted to have full control of their specific products and brands, they could now branch off this and create their own primitives to build from without conflicts.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+                <div class="md:col-span-1 flex flex-col">
+                    <div class="relative min-h-[425px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-8 md:p-12 w-full flex items-center justify-center">
+                        <img src="/assets/work/semantic-tokens/project-restructure.png" alt="Project Restructure" class="w-full h-full object-contain rounded-2xl">
+                    </div>
+                    <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Modular structure for more flexibility, control and fewer conflicts.</p>
+                </div>
+            </div>
+    </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Version 1</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Tokens that proved the concept (but didn't scale)</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    I got a version 1 token set off to a good start, but had to step away on parental leave 👶🏼. 
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    While out, the team launched an initial token set quickly to continue momentum and establish the workflow. It helped, but it exposed the scaling problems fast.
+                </p>
+            </div>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/semantic-tokens/semantic-general-v1.jpg" alt="Version 1 tokens" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">General v1 Token Set the team completed while I was on leave</p>
+            </div>
+            <div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/semantic-tokens/semantic-feedback-v1.png" alt="Version 1 tokens" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+                <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Feedback v1 Token Set the team completed while I was on leave</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-24">
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-6">What worked</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Teams began referencing tokens instead of one-off values</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Styling started to feel repeatable</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Engineers saw immediate value in reducing "design interpretation time"</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-6">Where it fell apart at scale</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Naming wasn't strict enough — a lot of redundancy existed.</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Too global in scope — tokens being used incorrectly</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Guidelines were vague — inconsistent adoption and confusion</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Taxonomy wasn't predictable — harder for humans (and agents) to reason about</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Version 2</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">A scalable taxonomy (Object → Base → Modifier)</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl">
+                    I created Version 2 with a goal of clarity, predictability, and governance—so tokens could be understood quickly by designers, engineers, and future AI agents.
+                </p>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 md:p-8 overflow-hidden">
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Before (Slider Left): Legacy tokens → After (Slider Right): Object-Base-Modifier taxonomy</p>
+                <div class="relative w-full overflow-hidden rounded-2xl select-none touch-none" id="token-comparison" style="aspect-ratio: 16/10;">
+                    <img src="/assets/work/semantic-tokens/old-tokens.png" alt="Before: Legacy token structure" class="absolute inset-0 w-full h-full object-contain pointer-events-none" />
+                    <div class="comparison-reveal absolute inset-0 overflow-hidden" style="--pos: 50; clip-path: inset(0 calc(100% - var(--pos) * 1%) 0 0);">
+                        <img src="/assets/work/semantic-tokens/obm-tokens.png" alt="After: Object-Base-Modifier token structure" class="absolute inset-0 w-full h-full object-contain pointer-events-none" style="width: 100%; min-width: 100%;" />
+                    </div>
+                    <div class="comparison-handle absolute top-0 bottom-0 w-0.5 bg-white shadow-lg cursor-ew-resize z-10" style="left: calc(var(--pos, 50) * 1%); transform: translateX(-50%);" aria-label="Drag to compare">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-800 border-2 border-primary flex items-center justify-center shadow-lg">
+                            <span class="material-symbols-outlined text-primary text-xl">unfold_more</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            (function() {
+                var el = document.getElementById('token-comparison');
+                if (!el) return;
+                var reveal = el.querySelector('.comparison-reveal');
+                var handle = el.querySelector('.comparison-handle');
+                var pos = 50;
+                function setPos(p) {
+                    pos = Math.max(5, Math.min(95, p));
+                    el.style.setProperty('--pos', pos);
+                    if (reveal) reveal.style.setProperty('--pos', pos);
+                    if (handle) handle.style.setProperty('--pos', pos);
+                }
+                function onMove(e) {
+                    var rect = el.getBoundingClientRect();
+                    var x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
+                    setPos((x / rect.width) * 100);
+                }
+                function stopDrag() {
+                    document.removeEventListener('mousemove', onMove);
+                    document.removeEventListener('mouseup', stopDrag);
+                    document.removeEventListener('touchmove', onMove, { passive: true });
+                    document.removeEventListener('touchend', stopDrag);
+                }
+                function startDrag(e) {
+                    e.preventDefault();
+                    onMove(e);
+                    document.addEventListener('mousemove', onMove);
+                    document.addEventListener('mouseup', stopDrag);
+                    document.addEventListener('touchmove', onMove, { passive: true });
+                    document.addEventListener('touchend', stopDrag);
+                }
+                handle.addEventListener('mousedown', startDrag);
+                handle.addEventListener('touchstart', startDrag, { passive: false });
+            })();
+            </script>
+
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-6">Design principles for V2</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">account_tree</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Strict structure</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Creating an understandable taxonomy</p>
+                    </div>
+                    <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">psychology</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Agent-ready</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">We could reference OBM and it would understand.</p>
+                    </div>
+                    <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">compress</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Reduce redundancy</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Fewer tokens equals less confusion</p>
+                    </div>
+                    <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">hub</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Semantic Groups</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Rather than just "General" and "Feedback", we should group tokens by their semantic meaning for many beneifts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/semantic-tokens/naming-structure.png" alt="Naming Structure" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">What we did</h4>
+                <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">Easier to research and understand</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">Easier to document and enforce</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">Easier to map to code consistently</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-xl leading-relaxed">More compatible with automation (linting, token pipelines, AI-assisted build workflows)</span>
+                    </li>
+                </ul>
+            </div>
+            <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Reduced Redundancy</h4>
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 md:p-8 lg:top-8">
+                <img src="/assets/work/semantic-tokens/token-translation.png" alt="Version 2 taxonomy" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Introduced Semantic Groups</h4>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                We didn't want to get as specific as component tokens, but needed more control and guidance for sepcific groups.
+            </p>
+            <div class="relative" id="taxonomy-carousel">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="carousel-caption text-xs font-bold uppercase tracking-widest text-slate-400">Controls token structure: Object → Base → Modifier mapping with variable scopes.</p>
+                    <div class="flex items-center gap-3 shrink-0 ml-4">
+                        <button onclick="carouselNav('taxonomy-carousel', -1)" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-primary hover:text-white text-slate-600 dark:text-slate-300 transition-colors duration-200">
+                            <span class="material-symbols-outlined text-xl">chevron_left</span>
+                        </button>
+                        <span class="carousel-counter text-sm font-medium text-slate-500 dark:text-slate-400 tabular-nums">1 / 3</span>
+                        <button onclick="carouselNav('taxonomy-carousel', 1)" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-primary hover:text-white text-slate-600 dark:text-slate-300 transition-colors duration-200">
+                            <span class="material-symbols-outlined text-xl">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/semantic-tokens/structure-controls.png" alt="Token structure — Controls" class="carousel-slide w-full h-auto object-contain rounded-2xl" data-caption="Controls token structure: Object → Base → Modifier mapping with variable scopes.">
+                    <img src="/assets/work/semantic-tokens/structure-actions.png" alt="Token structure — Actions" class="carousel-slide w-full h-auto object-contain rounded-2xl hidden" data-caption="Actions token structure: color/action scoped by variant, state, and surface.">
+                    <img src="/assets/work/semantic-tokens/structure-feedback.png" alt="Token structure — Feedback" class="carousel-slide w-full h-auto object-contain rounded-2xl hidden" data-caption="Feedback token structure: color/action scoped by variant, state, and surface.">
+
+                </div>
+            </div>
+            <script>
+            function carouselNav(id, dir) {
+                var el = document.getElementById(id);
+                var slides = el.querySelectorAll('.carousel-slide');
+                var caption = el.querySelector('.carousel-caption');
+                var counter = el.querySelector('.carousel-counter');
+                var current = 0;
+                slides.forEach(function(s, i) { if (!s.classList.contains('hidden')) current = i; });
+                slides[current].classList.add('hidden');
+                var next = (current + dir + slides.length) % slides.length;
+                slides[next].classList.remove('hidden');
+                caption.textContent = slides[next].getAttribute('data-caption');
+                counter.textContent = (next + 1) + ' / ' + slides.length;
+            }
+            // Auto-init carousel counters on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[id$="-carousel"]').forEach(function(el) {
+                    var slides = el.querySelectorAll('.carousel-slide');
+                    var counter = el.querySelector('.carousel-counter');
+                    if (counter && slides.length) {
+                        counter.textContent = '1 / ' + slides.length;
+                    }
+                });
+            });
+            </script>
+        </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Guardrails</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Variable scoping as a guardrail</h3>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <div class="flex flex-col gap-8">
+                    <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl">
+                        As token adoption grew, we added variable scoping to reduce misuse and keep tokens tied to their intended purpose. Instead of treating tokens like a grab-bag of values, scoping lets us constrain where a token can be applied — so teams reach for the right intent by default.
+                    </p>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Why it mattered</h4>
+                        <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed"><strong class="text-slate-900 dark:text-white">Prevents semantic drift:</strong> e.g., a "success" token getting reused as a generic green</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed"><strong class="text-slate-900 dark:text-white">Guides correct usage:</strong> tokens are discoverable in the contexts they're meant for</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed"><strong class="text-slate-900 dark:text-white">Reduces one-off styling:</strong> fewer "closest match" decisions that slowly erode consistency</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed"><strong class="text-slate-900 dark:text-white">Scales governance:</strong> the system enforces guardrails so the DS team doesn't have to police every decision</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">How we used it</h4>
+                        <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Scoped tokens by intent and surface (e.g., text vs icon vs background) so designers and engineers weren't guessing</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Kept the library flexible, but purposefully constrained — enough freedom to design, not enough to accidentally create new standards</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 md:p-8 lg:sticky lg:top-8">
+                    <img src="/assets/work/semantic-tokens/scoping-variables.png" alt="Variable scoping in Figma — color scope panel" class="w-full h-auto object-contain rounded-2xl">
+                    <p class="text-center mt-4 text-xs font-bold uppercase tracking-widest text-slate-400">Scoping tokens by surface type (Frame, Shape, Text, etc.) in Figma Variables.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Process</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Token governance and change management</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl mb-8">
+                    Design tokens only work long-term if they're treated like a shared product—with clear ownership, a request path, review gates, and a reliable way to ship changes from design to code.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl">
+                    At PrizePicks, we built a governance workflow that balanced two realities:
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+                <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">brush</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Design</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Needs a fast, approachable authoring tool — we standardized on <strong class="text-slate-900 dark:text-white">Figma Variables</strong>.</p>
+                </div>
+                <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">terminal</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Engineering</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Needs auditable, reviewable changes — every update lands in <strong class="text-slate-900 dark:text-white">GitHub as a PR</strong>.</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">The workflow we landed on</h4>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/semantic-tokens/tokens-flow.png" alt="Version 2 workflow" class="w-full h-auto object-contain rounded-2xl">
+                </div>
+            </div>
+            {% include insight-callout.html
+                label="Why we didn't use Tokens Studio"
+                icon="info"
+                text="I explored Tokens Studio and had it configured, but the team found it too intimidating and unfamiliar. Governance only works if teams will actually use the workflow—so we prioritized a tool designers were already comfortable with and invested in a review pipeline that still met engineering's standards."
+            %}
+        </div>
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Refinement</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Iteration and validation</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-xl max-w-3xl">
+                    We didn't do a hard launch. We refined it through real usage.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-6">How we pressure-tested V2</h4>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                        <span class="font-metric text-3xl font-bold text-primary mb-3 block">01</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Incremental migration</p>
+                        <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">V1 → V2 without breaking everyone overnight</p>
+                    </div>
+                    <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                        <span class="font-metric text-3xl font-bold text-primary mb-3 block">02</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Feedback loops</p>
+                        <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Collected input from designers + engineers during adoption</p>
+                    </div>
+                    <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                        <span class="font-metric text-3xl font-bold text-primary mb-3 block">03</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Token audit</p>
+                        <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Renamed and re-scoped confusing tokens</p>
+                    </div>
+                    <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                        <span class="font-metric text-3xl font-bold text-primary mb-3 block">04</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Tighter guidelines</p>
+                        <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Based on the questions teams actually asked</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

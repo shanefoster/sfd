@@ -1,0 +1,45 @@
+# Site Settings
+title: "shanefoster"
+description: "I build strong partnerships across design and engineering to create systems that teams adopt, and that move business goals forward."
+url: "https://shanefoster.design"
+baseurl: "" # Subpath of your site
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - postcss.config.js
+  - README.md
+  - .gitignore
+
+# Collections
+collections:
+  work:
+    output: true
+    permalink: /casestudy/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "_work"
+      type: "work"
+    values:
+      layout: "work"
+      sort_order: 999
+      sitemap: false
+      noindex: true

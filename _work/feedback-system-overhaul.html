@@ -1,0 +1,535 @@
+---
+titlefull: "Feedback System Overhaul: Toast + Inline Alert Banners"
+titlestart: "Feedback System"
+titleend: "Overhaul"
+year: 2024
+company: PrizePicks
+description: "Turning ephemeral feedback messages into persistent, actionable guidance — improving lineup submission success and increasing entry volume."
+excerpt: "Turning ephemeral feedback messages into persistent, actionable guidance, improving lineup submission success and increasing entry volume."
+image: /assets/work/feedback-system/feedback-intro.png
+role: Design Systems Lead
+team: "Product, Design, Eng, Analytics"
+timeline: "2024"
+metrics:
+  - value: "+4.73%"
+    label: "Entry Conversion"
+  - value: "+4.3%"
+    label: "Entries Per User"
+sort_order: 2
+---
+
+<section class="w-full border-b border-border-light dark:border-border-dark overflow-hidden pb-24">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col items-center text-center">
+        <div class="max-w-3xl text-left space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">The Problem</span>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                Entry submission errors were happening at scale, and the impact was concentrated within the most important flow of the product: checkout.
+            </p>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                Users would complete the lineup-building steps, attempt to submit, and then get blocked by errors that surfaced only after submission.  
+            </p>
+            {% include insight-callout.html
+                label="The Hypothesis"
+                icon="lightbulb"
+                text="By notifying our members of errors / lineup validations sooner, we can improve lineup submission success rate by x %, and thereby increase NGR by y %"
+            %}
+            <p class="text-sm text-slate-500 dark:text-slate-400 italic mt-4">
+                We weren't entirely sure how much this change would improve these stats — but even a 1% lift for each, at our scale, would equate to massive amounts of revenue.
+            </p>
+        </div>
+        <div class="max-w-3xl mt-8">
+            <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4 text-left">Primary KPIs</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">target</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Lineup Success</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Increase lineup submission success rate</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">target</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Entries</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Increase entries per user</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include case-study-hero.html image="/assets/work/feedback-system/feedback-masthead.png" alt="Feedback System Overhaul Masthead" %}
+<section class="w-full bg-slate-50 dark:bg-surface-dark py-24 border-b border-border-light dark:border-border-dark">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div class="flex flex-col items-center text-center mb-16">
+            <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Experiment Results</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x-2 divide-slate-300 dark:divide-slate-700 mb-12">
+            <div class="relative px-8 md:px-10 md:text-center">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">+4.73%</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Entry Conversion</p>
+                <p class="font-body text-slate-600 dark:text-slate-400">Finalize lineup → Successful entry placed.</p>
+            </div>
+            <div class="relative px-8 md:px-10 md:text-center">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">+4.3%</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Entries Per User</p>
+                <p class="font-body text-slate-600 dark:text-slate-400">Statistically significant increase in entry volume.</p>
+            </div>
+        </div>
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed italic">
+                90 day results shown. Experiment results led to a recommendation to roll out to 100% of users due to improved entry placement flow and increased entry volume.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="w-full max-w-[1200px] px-4 md:px-8 py-32 mx-auto">
+    <div class="flex flex-col gap-32">
+
+        <!-- #1 The Problem with Real Data -->
+        <div class="flex flex-col gap-8">   
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Data</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">The Data</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg text-center">
+                    <span class="font-metric text-4xl font-bold text-primary block mb-2">~25%</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">of "Lineup Submit" clicks resulted in an error.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg text-center">
+                    <span class="font-metric text-4xl font-bold text-primary block mb-2">72%</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">of submission errors came from just the top 6 error messages.</p>
+                </div>
+            </div>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl">
+                <strong class="text-slate-900 dark:text-white">Worst offender:</strong> we often surfaced errors only after submit, and then delivered them via toasts that disappeared.
+            </p>
+            <!-- Image placeholder: Mixpanel chart + top errors list -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/feedback-system/mixpanel-errors.png" alt="Mixpanel error data" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">Mixpanel data showing ~25% submit → error rate and the top error messages.</p>
+        </div>
+
+        <!-- #2 My Role -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Leadership</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">My role</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    Design Systems Lead (design + documentation + governance), partnering with:
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-2xl shrink-0">brush</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Product Design</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Lineup checkout</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-2xl shrink-0">terminal</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Engineering</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Implementation + refactor</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-2xl shrink-0">analytics</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Analytics / Data</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Instrumentation + readouts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- #3 Catalyst: Interface Inventory Audit -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Catalyst</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Interface Inventory Audit (Finding the pattern behind the problem)</h3>
+            </div>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl">
+                When I joined PrizePicks, I kicked off an interface inventory audit to map the anatomy of our UI, core patterns, components, and where consistency was breaking down.
+            </p>
+            <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl">
+                As I documented our feedback ecosystem (toasts, inline messaging, alert banners, and system messages), one issue stood out immediately: we were relying heavily on temporary toast messages for user feedback, including cases where users needed to read, understand, and take action. At scale, this created a mismatch between message severity and message persistence. Critical guidance was disappearing before users could resolve the issue.
+            </p>
+            {% include insight-callout.html
+                label="The Opportunity"
+                icon="lightbulb"
+                text="This audit resulted in our product teams reassessing where, when, and how feedback should appear across key flows, especially in moments tied directly to conversion."
+            %}
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/feedback-system/toasts-incorrect.png" alt="Examples of incorrect toast usage" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">Examples of toast usage that should instead be persistent alert banners.</p>
+        </div>
+
+        <!-- #4 What I Shipped: Toast Redesign -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Solution 1</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Toast redesign</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    Although the focus of this initative was to focus on persisten Alert Banners, we also took the opportunity to redesign the toasts to be clear, minimal, and accessible. We needed to make sure we leverage our new Feedback token set, and make sure the feedback component system is consisten visually. 
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Toast is now for</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Non-blocking confirmations ("Saved", "Copied", "Updated")</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Background status updates</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Lightweight info that doesn't require action</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Toast is not for</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Blocking errors</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Multi-step resolution instructions</p>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Anything the user must remember to complete the task</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image placeholder: Before/after toast design + anatomy -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/feedback-system/toast-versions.png" alt="Before and after toast design" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">Before/after toast design + anatomy.</p>
+        </div>
+
+        <!-- #5 Inline Alert Banners -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Solution 2</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Inline, persistent Alert Banners (the real fix)</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I introduced inline, contextual Alert Banners that replaced many incorrectly-used toasts, especially in the lineup funnel.
+                </p>
+            </div>
+            <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Trigger based on user action</strong> or validation</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Persist until resolved</strong> — no disappearing messages</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Sit where the problem is,</strong> not floating somewhere else</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Include clear next steps</strong> (and CTAs when appropriate)</span>
+                </li>
+            </ul>
+            <!-- Image placeholder: Inline banner in lineup flow -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/feedback-system/alert-banners-v1.png" alt="Inline alert banner in lineup flow" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">v1 of our Alert Banners that didn't seem noticable enough based on our testing..</p>
+            <!-- Image placeholder: Inline banner in lineup flow -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/feedback-system/alert-banners-v2.png" alt="Inline alert banner in lineup flow" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">v2 of our Alert Banners that we tested and found to be more noticable.</p>
+        </div>
+
+        <!-- #6 Feedback Tokens -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Solution 3</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Feedback tokens + accessibility baked in</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    We had older/unreleased feedback components, but they were too bland to notice (and the opposite extreme — too branded — also reduced clarity). So we standardized feedback using a Feedback token group:
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">contrast</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Stronger semantic contrast</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Error / Warning / Success / Info — each visually distinct and unmistakable.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">category</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Consistent iconography</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Predictable emphasis and hierarchy across all feedback types.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">accessibility_new</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Accessible color usage</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Meets contrast requirements with a predictable hierarchy.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">verified</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">System-level guidance</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Feedback feels like guidance, not product decoration.</p>
+                </div>
+            </div>
+                        <!-- Image placeholder: Before/after toast design + anatomy -->
+                        <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                            <img src="/assets/work/feedback-system/semantic-feedback.png" alt="Semantic feedback tokens" class="w-full h-auto object-contain rounded-2xl">
+                        </div>
+                        <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">Our new Feedback token set.</p>
+            
+        </div>
+
+        <!-- #7 The UX Shift -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">The Shift</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">The lineup submission change that moved the needle</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    The biggest UX failure wasn't just how errors appeared — it was <strong class="text-slate-900 dark:text-white">when.</strong>
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    We introduced two new patterns for static alert banners that notify users of changes they need to make before submitting their picks.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-red-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-red-400 text-2xl shrink-0">cancel</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Before</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Post-submit error surprises + disappearing toast</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">check_circle</span>
+                    <div>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">After</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Earlier validation + persistent inline banners</p>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-3xl">
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl mb-4">
+                    The new banners explained:
+                </p>
+                <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">What happened</strong></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">Why it happened</strong></span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">How to fix it</strong> (with a direct action when possible)</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Image placeholder: Before/after flow diagram -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                <img src="/assets/work/feedback-system/picks-two-teams.png" alt="Picks flow diagram" class="w-full h-auto object-contain rounded-2xl">
+            </div>
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">Notifying users before submission that they have something to fix</p>
+        </div>
+ 
+
+        <!-- #9 Documentation & Guidelines -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Governance</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Documentation & guidelines</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    I treated this as a system change, not a one-off UI tweak. Deliverables included:
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">description</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Component docs</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Variants, anatomy, behavior, accessibility.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">rule</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Usage guidance</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Toast vs Alert Banner decision rules.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">edit_note</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Content guidelines</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Error writing structure + examples.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">swap_horiz</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Migration guidance</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">How teams replace toast misuse.</p>
+                </div>
+            </div>
+            <!-- Docs image carousel -->
+            <div class="relative" id="docs-guidelines-carousel">
+                <div class="flex items-center justify-between mb-4">
+                    <p class="carousel-caption text-xs font-bold uppercase tracking-widest text-slate-400">Toast anatomy and usage.</p>
+                    <div class="flex items-center gap-3 shrink-0 ml-4">
+                        <button onclick="carouselNav('docs-guidelines-carousel', -1)" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-primary hover:text-white text-slate-600 dark:text-slate-300 transition-colors duration-200">
+                            <span class="material-symbols-outlined text-xl">chevron_left</span>
+                        </button>
+                        <span class="carousel-counter text-sm font-medium text-slate-500 dark:text-slate-400 tabular-nums">1 / 3</span>
+                        <button onclick="carouselNav('docs-guidelines-carousel', 1)" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 hover:bg-primary hover:text-white text-slate-600 dark:text-slate-300 transition-colors duration-200">
+                            <span class="material-symbols-outlined text-xl">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-8 md:p-12">
+                    <img src="/assets/work/feedback-system/docs-toast-anatomy.png" alt="Toast anatomy" class="carousel-slide w-full h-auto object-contain rounded-2xl" data-caption="Toast anatomy and usage.">
+                    <img src="/assets/work/feedback-system/docs-toast-content.png" alt="Toast content guidelines" class="carousel-slide w-full h-auto object-contain rounded-2xl hidden" data-caption="Toast content guidelines.">
+                    <img src="/assets/work/feedback-system/docs-toast-variants.png" alt="Toast variants" class="carousel-slide w-full h-auto object-contain rounded-2xl hidden" data-caption="Toast variants and when to use each.">
+                    <img src="/assets/work/feedback-system/docs-alert-anatomy.png" alt="Alert banner anatomy" class="carousel-slide w-full h-auto object-contain rounded-2xl hidden" data-caption="Alert banner anatomy and usage.">
+                </div>
+            </div>
+            <script>
+            function carouselNav(id, dir) {
+                var el = document.getElementById(id);
+                if (!el) return;
+                var slides = el.querySelectorAll('.carousel-slide');
+                var caption = el.querySelector('.carousel-caption');
+                var counter = el.querySelector('.carousel-counter');
+                var current = 0;
+                slides.forEach(function(s, i) { if (!s.classList.contains('hidden')) current = i; });
+                slides[current].classList.add('hidden');
+                var next = (current + dir + slides.length) % slides.length;
+                slides[next].classList.remove('hidden');
+                if (caption) caption.textContent = slides[next].getAttribute('data-caption');
+                if (counter) counter.textContent = (next + 1) + ' / ' + slides.length;
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[id$="-carousel"]').forEach(function(el) {
+                    var slides = el.querySelectorAll('.carousel-slide');
+                    var counter = el.querySelector('.carousel-counter');
+                    if (counter && slides.length) counter.textContent = '1 / ' + slides.length;
+                });
+            });
+            </script>
+        </div>
+
+        <!-- #8 Experiment & Rollout -->
+        <div class="flex flex-col gap-8 mt-24 mb-24">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Experiment</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Experiment & rollout</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    We ran this as an Error Optimization Experiment and ramped exposure while monitoring guardrails.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-6">Early read (20% exposure, 2 weeks)</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">trending_up</span>
+                            <div>
+                                <p class="font-heading font-bold text-primary text-lg">+1.16%</p>
+                                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Finalize Entry → Successful Entry Placed</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">trending_up</span>
+                            <div>
+                                <p class="font-heading font-bold text-primary text-lg">+2.2%</p>
+                                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Entries placed per user</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-6">Final read (100% exposure, 60 days)</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">trending_up</span>
+                            <div>
+                                <p class="font-heading font-bold text-primary text-lg">+4.33%</p>
+                                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Entries per user</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-5 shadow-sm rounded-lg">
+                            <span class="material-symbols-outlined text-green-500 text-2xl shrink-0">trending_up</span>
+                            <div>
+                                <p class="font-heading font-bold text-primary text-lg">+4.73%</p>
+                                <p class="font-body text-slate-600 dark:text-slate-400 text-sm">Finalize lineup → Successful entry placed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- #10 What I Learned -->
+        <div class="flex flex-col gap-8 mb-24">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Reflection</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">What I learned</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">attach_money</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Feedback is conversion UX</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">If your "money moment" flow has unclear errors, you're silently bleeding revenue.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">schedule</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Timing > visuals</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">The highest leverage work wasn't redesigning visuals — it was fixing timing + persistence + clarity.</p>
+                </div>
+                <div class="bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">construction</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Adoption prevention</p>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Making patterns easy to adopt (tokens + guidelines + examples) prevented teams from falling back to toast-as-a-hammer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- #11 Next Steps -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">What's Next</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">If I kept pushing this further</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">expand</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Expand to other funnels</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Same banner + validation approach for withdrawal, promos, account funding.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">label</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Error taxonomy</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">Standardize so product + engineering share definitions and severity levels.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="material-symbols-outlined text-primary text-2xl mb-3 block">query_stats</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Richer instrumentation</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-base leading-relaxed">"Resolved vs abandoned after error banner shown" to quantify win per error type.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

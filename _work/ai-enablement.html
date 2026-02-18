@@ -1,0 +1,630 @@
+---
+titlefull: AI-Enabled Design-to-Engineering Workflow
+titlestart: AI-Enabled
+titleend: Design-to-Engineering Workflow
+year: 2025
+company: PrizePicks
+description: "Building machine-readable design standards that turned 1-hour manual screen builds into 5–7 minute agent-assisted workflows."
+excerpt: "Building machine-readable design standards that turned 1-hour manual screen builds into 5–7 minute agent-assisted workflows."
+image: /assets/work/ai-enablement/ai-intro.png
+role: Design System Manager
+team: "Myself, Sr DS Engineer"
+timeline: Q4 2025 — Q1 2026
+metrics:
+  - value: "10X"
+    label: "Implementation Speed"
+  - value: "90%"
+    label: "Accuracy Rate"
+sort_order: 1
+---
+<section class="w-full border-b border-border-light dark:border-border-dark overflow-hidden pb-24">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col items-center text-center">
+        <div class="max-w-3xl text-left space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">The Problem</span>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                When we started testing an AI-assisted design-to-engineering workflow (using Figma’s MCP Dev Server), one thing became immediately clear: the agent is only as good as the context we give it. 
+            </p>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                Our core design system components translated well, because they’re built with consistent tokens, structure, and naming.            
+            </p>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                The moment we pulled in shared, product-specific components, things started to drift and engineers had to step in to interpret intent again. 
+            </p>
+            <ul class="space-y-4 max-w-3xl bg-slate-50 dark:bg-surface-dark border-l-2 border-red-300/50 rounded-r-lg py-6 px-6">
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Building screens in RN required interpretation, back-and-forth, and manual assembly.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Agents can move fast, but only when the design artifacts are semantically consistent.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Core DS components performed well; shared components caused accuracy + consistency issues.</span>
+                </li>
+            </ul>
+            <p class="font-body text-xl md:text-xl text-slate-600 dark:text-slate-400 leading-loose">
+                So the real problem wasn’t “can the agent build screens?” It was “can we make our design artifacts reliable enough that the agent can’t misinterpret them?”           
+             </p>
+        </div>
+    </div>
+</section>
+{% include case-study-hero.html image="/assets/work/ai-enablement/ai-masthead.png" alt="AI-assisted design-to-engineering workflow demo" %}
+<section class="w-full bg-slate-50 dark:bg-surface-dark py-24 border-b border-border-light dark:border-border-dark">
+    <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div class="flex flex-col items-center text-center mb-16">
+            <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Measurable Impact</h2>
+            <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 md:divide-x-2 divide-slate-300 dark:divide-slate-700">
+            <div class="relative px-8 md:px-10">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">10x</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Faster Implementation</p>
+                <p class="font-body text-slate-600 dark:text-slate-400">Our tests reduced multiple screen implmentations from 60 to 6 minutes.</p>
+            </div>
+            <div class="relative px-8 md:px-10">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">90%</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Accuracy Rate</p>
+                <p class="font-body text-slate-600 dark:text-slate-400">For properly prepared and documented components.</p>
+            </div>
+            <div class="relative px-8 md:px-10">
+                <h4 class="font-metric text-6xl font-bold text-primary mb-2">55%</h4>
+                <p class="text-sm uppercase tracking-widest text-slate-500 mb-2">Compliance Percentage</p>
+                <p class="font-body text-slate-600 dark:text-slate-400">For shared product components that met our standards.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="w-full max-w-[1200px] px-4 md:px-8 py-32 mx-auto">
+    <div class="flex flex-col gap-32">
+        <!-- 2) Context -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Context</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Why is this a focus?</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    There is a huge push within our company to adopt AI. 
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    Since I have technical background, I'm leading the charge on the design side, educating and enabling the teams.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">auto_awesome</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">We're pushing toward an AI-assisted design → engineering workflow.</p>
+                </div>
+                <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">integration_instructions</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">We adopted Figma's MCP Dev Server to generate implementation from design context.</p>
+                </div>
+                <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm">
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">warning</span>
+                    <p class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Our core DS library is structured; shared/product libraries are more variable and create drift.</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- 4) Goals and Success Criteria -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Objectives</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Goals and success criteria</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    <strong class="text-slate-900 dark:text-white">Primary goal:</strong> Make design artifacts human AND agent-consumable so automation is reliable.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Success metrics</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl shrink-0">timer</span>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">2X Faster Implementation time</p>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Baseline vs agent-assisted screen build.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl shrink-0">check_circle</span>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white mb-1"> 90% Accuracy rate</p>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">% of screen built correctly without manual intervention.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl shrink-0">build</span>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">Drift fixes</p>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed"># of token, layout, and component usage corrections required</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl shrink-0">fact_check</span>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white mb-1">50% Compliance rate</p>
+                            <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Shared library components meeting standards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 5) My Role -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Leadership</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">My role</h3>
+            </div>
+            <ol class="space-y-4 max-w-3xl">
+                <li class="flex items-center gap-4">
+                    <span class="font-metric text-lg font-bold text-primary shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">1</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Led evaluation and rollout strategy for MCP-based workflow</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <span class="font-metric text-lg font-bold text-primary shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">2</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Defined what "agent-ready" means for our system (beyond visual consistency)</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <span class="font-metric text-lg font-bold text-primary shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">3</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Created standards + enablement to reduce drift across the org</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <span class="font-metric text-lg font-bold text-primary shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">4</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Partnered with engineering to validate feasibility via a working POC demo</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <span class="font-metric text-lg font-bold text-primary shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">5</span>
+                    <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Educate, support and enable product teams to build agent-ready components</span>
+                </li>
+            </ol>
+        </div>
+
+
+        <!-- 7) Solution: Agent-Ready Component Program -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">The Solution</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Agent-ready, structured intent</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-16">We first focused on our core system to serve as an example, then focused on shared/product libraries to reduce drift.</p>
+            </div>
+
+            <div class="flex flex-col gap-32">
+                <!-- MCP Servers: Text left, Image right + callout (16px between, 32px below callout) -->
+                <div class="flex flex-col space-y-4 mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Infrastructure</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">MCP servers</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-heading font-bold text-slate-900 dark:text-white text-lg mb-3">What it unlocks</h5>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Faster design-to-code starts</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Less "guessing" on variants/props</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">More consistent implementation across teams</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-bold text-slate-900 dark:text-white text-lg mb-3">How we're using it today</h5>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Agent reads component context</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Agent references our detailed tokens and styles</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                        <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Agent outputs code aligned to DS (and other shared product components)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2 min-w-0">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/figma-mcp-dev.png" alt="Figma MCP Dev server settings and MCP Console" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                {% include insight-callout.html
+                    label="In exploration"
+                    icon="science"
+                    text="We're currently testing and exploring combining Figma's MCP Dev server with the Figma Console MCP for added control and context."
+                    link_url="https://github.com/southleft/figma-console-mcp"
+                    link_text="Figma Console MCP (GitHub)"
+                    full_width=true
+                %}
+                </div>
+
+                <!-- Pillar A: Text left, Image right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Pillar A</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">Semantic correctness</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">We updated to a well defined naming structure</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">We use a clear, popular format that is used across the industry that agents and humans can understand</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">We documented all tokens with their use and context</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">We attached them to all Flex DS components</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/semantic-assignments.png" alt="Semantic tokens in use" class="w-full h-auto object-contain rounded-3xl" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar B: Image left, Text right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 order-1 lg:order-1">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/auto-layout.png" alt="Auto layout and spacign tokens applied" class="w-full h-auto object-contain rounded-3xl" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-2 lg:order-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Pillar B</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">Structural consistency</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Auto Layout rules and constraints standardized</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Spacing system enforced</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Layer naming and hierarchy made predictable for parsing</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar C: Text left, Image right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Pillar C</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">Behavioral clarity</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Captures intent and interaction logic—behaviors + edge cases visuals miss.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Gives agents localized context for code generation and parity checks, reducing hallucinations.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Reduces handoff churn and answers common engineering questions up front, speeding up implementation and review.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/native-annotations.png" alt="Component states and behavior annotations" class="w-full h-auto object-contain rounded-3xl" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar D: Image left, Text right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 order-1 lg:order-1 min-w-0">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/code-connect.png" alt="Code Connect and component mapping" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-2 lg:order-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Pillar D</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">Mapping to code</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Directly maps each component to the real component in code, reducing interpretation and drift.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Gives engineers and agents a source of truth, instead of guessing or copying unreliable snippets.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Enables token- and code-accurate output, grounded in connected component metadata (not visuals).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Pillar E: Text left, Image right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Pillar E</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">Component Descriptions</h4>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed mb-4">
+                            I wrote and provided a template for product teams to use to write component descriptions for shared global components. 
+                        </p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed mb-4">
+                            I'm currently working on writing a Figma plugin to help automate this process for our design teams.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Encodes intent and decision rules (why/when to use, when not to, and what to use instead).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Makes behavior explicit beyond visuals (interactions, states, constraints) to improve implementation accuracy.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Standardizes reusable context at scale so humans and agents get consistent guidance from Figma.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/component-descriptions.png" alt="Component states and behavior annotations" class="w-full h-auto object-contain rounded-3xl" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8) Proof of Concept Demo -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Validation</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Proof of concept demo</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    We tested an agent building a real screen using existing DS components and tokens, then compared it against a manual build.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl">
+                    We (myself and the Sr DS Engineer) presented our demo to executive leadership as well as in our company-wide AI Monthly meeting.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">What we tested</h4>
+                    <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">How an agent builds a real screen using existing Code Connected DS components and tokens</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">How an agent builds share library components that are outside the system, but properly documented.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Compared: manual build vs agent build</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">Results</h4>
+                    <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed"><strong class="text-slate-900 dark:text-white">~60 minutes → ~5–7 minutes</strong> (agent build time)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Strong performance using core DS components</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Drift surfaced with shared/product library components due to inconsistent prep/standards across teams</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img src="/assets/work/ai-enablement/ai-masthead.png" alt="AI-assisted design-to-engineering workflow demo" class="w-full h-auto object-contain rounded-3xl" loading="lazy">
+            {% include insight-callout.html
+                label="The Proof"
+                icon="verified"
+                text="The demo didn't just prove the agent works — it proved our standards work."
+            %}
+        </div>
+
+        <!-- 9) Drift Diagnosis -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Systems Leadership</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Drift diagnosis</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">What caused drift in shared libraries</h4>
+                    <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-red-300/50 rounded-r-lg py-6 px-6">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Missing or incorrect tokens</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Inconsistent naming and hierarchy</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Layout/constraints not aligned to DS expectations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Unclear prop/variant parity with code equivalents</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-red-400 text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Missing descriptions/annotations</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">What we changed</h4>
+                    <ul class="space-y-4 bg-slate-50 dark:bg-surface-dark border-l-2 border-primary/30 rounded-r-lg py-6 px-6">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Standardized the same "agent-ready contract" for shared components</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Added enablement + governance so teams can reach compliance without guesswork</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10) Enablement + Governance -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Scaling It</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Enablement + governance</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    We introduced a unified checklist that covers both standard global-ready component prep and AI readiness requirements.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl">
+                    Designers could pull this checklist into their files and actively start checking things off to make sure their work was properly prepared.
+                </p>
+            </div>
+            <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 pt-16 flex items-center justify-center">
+                <img src="/assets/work/ai-enablement/checklist.png" alt="Unified checklist" class="w-full h-auto object-contain rounded-3xl" loading="lazy">
+            </div>
+            <div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl mb-4">What we introduced</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">checklist</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Unified checklist</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Covers both "global-ready" component prep and AI readiness requirements in one artifact.</p>
+                    </div>
+                    <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">school</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Training + examples</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Good vs bad examples so teams understand the standard without guesswork.</p>
+                    </div>
+                    <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">verified</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Review + certification</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Certification path for shared components before they're reused broadly.</p>
+                    </div>
+                    <div class="relative bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-6 shadow-sm rounded-lg">
+                        <span class="material-symbols-outlined text-primary text-3xl mb-3 block">forum</span>
+                        <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Feedback loop</p>
+                        <p class="font-body text-slate-600 dark:text-slate-400 text-base leading-relaxed">Teams can request help and escalate edge cases through a clear channel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11) Impact -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Outcomes</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Impact</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col h-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-2xl">speed</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary">Efficiency</span>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Screen build time reduction demonstrated (POC)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Reduced translation overhead and rework</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col h-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary">Quality + Consistency</span>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Higher parity between design intent and implementation</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Reduced drift and inconsistency risk as shared components come into compliance</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col h-full bg-white dark:bg-surface-dark border border-slate-100 dark:border-border-dark p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-2xl">groups</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary">Org Capability</span>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                            <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">A repeatable standard and workflow that scales beyond one person/team</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 12) What's Next -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Roadmap</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">What's next</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="font-metric text-3xl font-bold text-primary mb-3 block">01</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Benchmark suite</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Build canonical screens for standardized evaluation.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="font-metric text-3xl font-bold text-primary mb-3 block">02</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Automated checks</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Token usage, naming, and layout rule validation.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="font-metric text-3xl font-bold text-primary mb-3 block">03</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Visual regression</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Storybook integration to prevent drift in code.</p>
+                </div>
+                <div class="relative bg-slate-50 dark:bg-surface-dark rounded-lg p-6 border-t-4 border-primary">
+                    <span class="font-metric text-3xl font-bold text-primary mb-3 block">04</span>
+                    <p class="font-heading font-bold text-slate-900 dark:text-white mb-2">Harden contracts</p>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Expand mapping coverage for shared components.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

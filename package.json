@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "A modern portfolio site built with Jekyll and Tailwind CSS",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17"
+  }
+}

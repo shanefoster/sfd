@@ -1,0 +1,9 @@
+# Work Assets Directory
+# 
+# Place images and assets for each work item in subdirectories named after the work item.
+# For example:
+# - assets/work/example-work/image1.jpg
+# - assets/work/example-work/screenshot.png
+# 
+# Reference these in your work markdown files using:
+# ![Image description]({{ '/assets/work/example-work/image1.jpg' | relative_url }})

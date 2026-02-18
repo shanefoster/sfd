@@ -1,0 +1,66 @@
+---
+layout: default
+title: Case Studies
+permalink: /casestudies/
+sitemap: false
+noindex: true
+---
+
+    <!-- Hero / Masthead Section -->
+    <section class="w-full border-b border-border-light dark:border-border-dark overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-24 md:py-32 flex flex-col items-center text-center">
+            <div class="mb-8">
+                <span class="text-primary font-heading italic text-lg tracking-wide">15+ years Product Design // 5+ years Design Systems</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black text-slate-900 dark:text-white leading-[1] mb-12 max-w-5xl">
+                Design Systems <span class="italic text-primary">Leader</span>
+            </h1>
+            <div class="relative w-full max-w-3xl aspect-[16/9] md:aspect-[21/9] mt-4 mb-16 overflow-hidden rounded-sm shadow-2xl">
+                <img
+                    alt="Portrait of Shane Foster in an office"
+                    class="w-full h-full object-cover object-top"
+                    src="/assets/img/headshot-extended.png"
+                />
+            </div>
+            <p class="font-body text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed italic border-l-4 border-primary pl-8 text-left">
+                "I combine technical fluency in code and AI with a relationship-first approach, building systems that align teams and maximize speed, consistency, and outcomes...and always with a healthy dose of humor, dad jokes and animated gifs."
+            </p>
+        </div>
+    </section>
+
+<section class="w-full max-w-[1200px] px-4 md:px-8 py-32">
+    <div class="flex flex-col mb-20 text-center">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-4">Some of My Work</h2>
+        <div class="w-24 h-1 bg-primary mx-auto"></div>
+    </div>
+    <div class="flex flex-col gap-32">
+        {% assign work_items = site.work | sort: "sort_order" %}
+        {% for project in work_items %}
+            {% assign variant_index = forloop.index0 | modulo: 2 %}
+            {% if variant_index == 0 %}
+                {% assign variant = 'right' %}
+            {% else %}
+                {% assign variant = 'left' %}
+            {% endif %}
+
+            {% include work-case-study.html
+                year=project.year
+                company=project.company
+                title=project.title
+                titlefull=project.titlefull
+                description=project.description
+                excerpt=project.excerpt
+                image=project.image
+                url=project.url
+                variant=variant
+                metrics=project.metrics
+                coming_soon=project.coming_soon
+                card_note=project.card_note
+            %}
+        {% endfor %}
+
+        {% if site.work.size == 0 %}
+            <p class="text-center text-slate-600 dark:text-slate-400">No case studies yet. Add some in the <code>_work</code> folder!</p>
+        {% endif %}
+    </div>
+</section>
