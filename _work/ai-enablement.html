@@ -396,7 +396,141 @@ sort_order: 1
             </div>
         </div>
 
-        <!-- 8) Proof of Concept Demo -->
+        <!-- 8) Automation: Figma Agent + Skills -->
+        <div class="flex flex-col gap-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Automation</span>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Automating the workflow with Figma's agent and Skills</h3>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-8">
+                    Preparing components by hand didn't scale across every product team. I encoded our standards into a set of native Figma Skills, published to the whole org, so Figma's agent can do the prep work and designers only review and answer questions.
+                </p>
+                <p class="font-body text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-xl max-w-3xl mb-16">
+                    The Skills run as a four-step pipeline: <strong class="text-slate-900 dark:text-white">annotate → describe → audit → document</strong>. Each step builds on the output of the step before it. Reads happen automatically, and any write to a component needs explicit confirmation.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-32">
+                <!-- Step 1: Text left, Image right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Step 1</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">annotate-component</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Writes native Dev Mode annotations as first-pass drafts, using the correct category for each.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Writes the questions a designer has to answer, and marks each one <strong class="text-slate-900 dark:text-white">[DRAFT]</strong> until a human edits it.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Triages a library to find which components are worth annotating, and never deletes an annotation.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2 min-w-0">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/annotate-component-skill.png" alt="The annotate-component Skill in Figma" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annotations example: full width -->
+                <div class="flex flex-col gap-4">
+                    <div class="relative bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                        <img src="/assets/work/ai-enablement/annotations-example.png" alt="Agent-written Behavior, Interaction, Accessibility, and Content annotations on a Callout component, with open questions marked [DRAFT]" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                    </div>
+                    <p class="font-body text-slate-500 dark:text-slate-400 text-sm md:text-base">Output from annotate-component on a Callout component. The questions still marked [DRAFT] are waiting for a designer to answer them.</p>
+                </div>
+
+                <!-- Step 2: Image left, Text right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 order-1 lg:order-1 min-w-0">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/describe-component-skill.png" alt="The describe-component Skill in Figma" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-2 lg:order-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Step 2</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">describe-component</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Builds the component's description field from the annotations written in Step 1.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Pulls in six sections from annotations (Interaction, Behavior, Motion, Accessibility, Content, Platform) and flags any that are missing.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Checks the authored sections with the designer before writing them, and shows unreviewed drafts as gaps, not as content.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3: Text left, Image right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Step 3</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">handoff-audit</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Checks every applied variable against the approved Semantic Variables library and nothing outside it.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Checks for semantic layer names, full annotation coverage, a clean description field, and Code Connect.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Places a scorecard frame on the canvas that summarizes whether the component is ready for engineering.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-7 order-1 lg:order-2 min-w-0">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/handoff-audit-skill.png" alt="The handoff-audit Skill in Figma" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Image left, Text right -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 order-1 lg:order-1 min-w-0">
+                        <div class="relative min-h-[300px] bg-slate-50 dark:bg-slate-800 rounded-3xl overflow-hidden p-6 md:p-12 flex items-center justify-center">
+                            <img src="/assets/work/ai-enablement/document-component-skill.png" alt="The document-component Skill in Figma" class="w-full h-auto object-contain rounded-3xl block" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-2 lg:order-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary mb-3 block">Step 4</span>
+                        <h4 class="font-heading font-bold text-slate-900 dark:text-white text-xl md:text-2xl mb-4">document-component</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Writes a markdown doc for the component that's ready to publish to Zeroheight.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Builds a visual doc frame on the canvas with variants, do/don't examples, and states.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">arrow_right_alt</span>
+                                <span class="font-body text-slate-600 dark:text-slate-400 text-base md:text-xl leading-relaxed">Creates a separate anatomy frame, ready to annotate.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TODO: additional automation images -->
+            </div>
+        </div>
+
+        <!-- 9) Proof of Concept Demo -->
         <div class="flex flex-col gap-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Validation</span>
@@ -452,7 +586,7 @@ sort_order: 1
             %}
         </div>
 
-        <!-- 9) Drift Diagnosis -->
+        <!-- 10) Drift Diagnosis -->
         <div class="flex flex-col gap-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Systems Leadership</span>
@@ -500,7 +634,7 @@ sort_order: 1
             </div>
         </div>
 
-        <!-- 10) Enablement + Governance -->
+        <!-- 11) Enablement + Governance -->
         <div class="flex flex-col gap-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Scaling It</span>
@@ -542,7 +676,7 @@ sort_order: 1
             </div>
         </div>
 
-        <!-- 11) Impact -->
+        <!-- 12) Impact -->
         <div class="flex flex-col gap-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Outcomes</span>
@@ -596,7 +730,7 @@ sort_order: 1
             </div>
         </div>
 
-        <!-- 12) What's Next -->
+        <!-- 13) What's Next -->
         <div class="flex flex-col gap-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-primary mb-4 block">Roadmap</span>
